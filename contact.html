@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> contact me </title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background: #0f0c29;
+      color: white;
+      font-family: Poppins, sans-serif;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+
+    nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #12123e;
+            padding: 20px;
+        }
+
+        nav .left {
+            font-size: 2rem;
+            color: #ffffff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #8671f1;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+    #contact {
+      margin: 4em auto;
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid white;
+    }
+
+    #contact:hover {
+      background: #000000;
+    }
+
+    #contact:active {
+      background: #444;
+    }
+
+    #contactForm {
+      display: none;
+      border: 6px solid #3324be;
+      padding: 2em;
+      width: 400px;
+      text-align: center;
+      background: #fff;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 16px;
+    }
+
+    input,
+    textarea {
+      outline: 0;
+      background: #f2f2f2;
+      width: 100%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+      border-radius: 15px;
+    }
+
+    textarea {
+      height: 80px;
+      resize: none;
+    }
+
+    .formBtn {
+      outline: 0;
+      background: #3324be;
+      width: 140px;
+      height: 30px;
+      border: 0;
+      color: #ffffff;
+      font-size: 1.2em;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="left">chay's portfolio</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="contact" class="formBtn">Contact</div>
+  <div id="contactForm">
+    <h1 style="margin-bottom: 10px;">Keep in touch</h1>
+    <form action="#">
+      <input placeholder="Name" type="text" required />
+      <input placeholder="Email" type="email" required />
+      <input placeholder="Subject" type="text" required />
+      <input placeholder="Message" />
+      <button class="formBtn" type="submit">Submit</button>
+    </form>
+  </div>
+  <script>
+    $(function() {
+      $('#contact').click(function() {
+        $('#contactForm').fadeToggle();
+      })
+      $(document).mouseup(function(e) {
+        var container = $("#contactForm");
+
+        if (!container.is(e.target) &&
+          container.has(e.target).length === 0) {
+          container.fadeOut();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skills</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #020024;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #12123e;
+            padding: 20px;
+        }
+
+        header .left {
+            font-size: 2rem;
+            color: #ffffff;
+        }
+
+        header ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        header ul li {
+            margin-right: 20px;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        header ul li a:hover {
+            color: #8671f1;
+        }
+
+        .skills {
+            padding: 20px;
+            background-color: #12123e;
+            color: #ffffff;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .skills h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills li {
+            margin: 10px;
+            width: calc(50% - 10px);
+        }
+
+        .skills a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        .skills a:hover {
+            color: #8671f1;
+        }
+
+        .infographic {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .infographic .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #12123e;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            opacity: 0.8;
+            transform: translateY(20px);
+        }
+
+        .infographic .item:hover {
+            opacity: 1;
+            transform: translateY(0);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .infographic .item i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        .infographic .item h3 {
+            font-size: 1rem;
+            margin-bottom: 0;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        .infographic .item p {
+            font-size: 0.8rem;
+            color: #8671f1;
+            transition: color 0.3s ease;
+        }
+
+        .infographic .item:hover i,
+        .infographic .item:hover h3,
+        .infographic .item:hover p {
+            color: #8671f1;
+        }
+</style>
+</head>
+<body>
+    <header>
+        <div class="left">chay's portfolio</div>
+        <div class="right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="infographic">
+        <div class="item">
+            <i class="fab fa-cuttlefish"></i>
+            <h3>C Programming</h3>
+            <p>Expert</p>
+        </div>
+        <div class="item">
+            <i class="fab fa-cuttlefish"></i>
+            <h3>C++ Programming</h3>
+            <p>Expert</p>
+        </div>
+        <div class="item">
+            <i class="fab fa-html5"></i>
+            <h3>HTML/CSS</h3>
+            <p>Expert</p>
+        </div>
+        <div class="item">
+            <i class="fab fa-js-square"></i>
+            <h3>JavaScript</h3>
+            <p>Intermediate</p>
+        </div>
+        <div class="item">
+            <i class="fab fa-react"></i>
+            <h3>React</h3>
+            <p>Beginner</p>
+        </div>
+        <div class="item">
+            <i class="fab fa-node-js"></i>
+            <h3>Node.js</h3>
+            <p>Beginner</p>
+        </div>
+        <div class="item">
+            <i class="fas fa-database"></i>
+            <h3>Database Management</h3>
+            <p>Intermediate</p>
+        </div>
+        
+    </div>
+</body>
+</html>

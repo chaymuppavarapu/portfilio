@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>education</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #020024;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #12123e;
+            padding: 20px;
+        }
+
+        nav .left {
+            font-size: 2rem;
+            color: #ffffff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #8671f1;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .education-container {
+            margin: 20px;
+        }
+
+        .education-box {
+            border: 5px solid #8671f1;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .education-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .field {
+            margin-bottom: 15px;
+        }
+
+        .field-label {
+            font-weight: bold;
+        }
+
+        .field-value {
+            color: #8671f1;
+        }
+
+        .resume-download {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .resume-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8671f1;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .resume-download a:hover {
+            background-color: #684fd3;
+        }
+
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .gif-container img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left">Chay's Portfolio</div>
+        <div class="right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="education-container">
+            <div class="education-box">
+                <div class="field">
+                    <p class="field-label">Degree:</p>
+                    <p class="field-value">BTech</p>
+                </div>
+                <div class="field">
+                    <p class="field-label">College Name:</p>
+                    <p class="field-value">SRM AP University</p>
+                </div>
+                <div class="field">
+                    <p class="field-label">Batch:</p>
+                    <p class="field-value">2022-2026</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="education-container">
+            <div class="education-box">
+                <div class="field">
+                    <p class="field-label">Course:</p>
+                    <p class="field-value">Intermediate</p>
+                </div>
+                <div class="field">
+                    <p class="field-label">College Name:</p>
+                    <p class="field-value">Sri Chaitanya Junior College</p>
+                </div>
+                <div class="field">
+                    <p class="field-label">Batch:</p>
+                    <p class="field-value">2020-2022</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="education-container">
+            <div class="education-box">
+                <div class="field">
+                    <p class="field-label">Course:</p>
+                    <p class="field-value">SSC</p>
+                </div>
+                <div class="field">
+                    <p class="field-label">School Name:</p>
+                    <p class="field-value">Bashyam High School</p>
+                </div>
+                <div class="field">
+                    <p class="field-label">Batch:</p>
+                    <p class="field-value">2019-2020</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="resume-download">
+        <a id="resume-link" href="463 resume 2/resume.html" download="Resume downloaded">Download Resume</a>
+    </div>
+    </div>
+    <script>
+        // Function to trigger additional file downloads
+        function downloadAdditionalFiles() {
+            // List of additional files to download
+            var additionalFiles = [
+                "463 resume 2/10 MARKS.pdf",
+                "463 resume 2/MARKS 12.pdf",
+                "463 resume 2/PHOTO 4.png"
+            ];
+
+            // Loop through the list of additional files and trigger their download
+            additionalFiles.forEach(function(file) {
+                var a = document.createElement('a');
+                a.href = file;
+                a.download = '';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            });
+        }
+
+        // Trigger the download of additional files when resume.html is downloaded
+        document.getElementById('resume-link').addEventListener('click', function() {
+            // Call the function to download additional files
+            downloadAdditionalFiles();
+        });
+    </script>
+</body>
+</html>
